@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListSogefiTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListSogefiEmpty}" rendered="#{sogefiController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{sogefiController.items.rowCount > 0}">
+                    <h:outputText value="#{sogefiController.pagination.pageFirstItem + 1}..#{sogefiController.pagination.pageLastItem + 1}/#{sogefiController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{sogefiController.previous}" value="#{bundle.Previous} #{sogefiController.pagination.pageSize}" rendered="#{sogefiController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{sogefiController.next}" value="#{bundle.Next} #{sogefiController.pagination.pageSize}" rendered="#{sogefiController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{sogefiController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListSogefiTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListSogefiTitle_centroCusto}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.centroCusto}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListSogefiTitle_municipio}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.municipio}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListSogefiTitle_sexo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.sexo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListSogefiTitle_estadoCivil}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.estadoCivil}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListSogefiTitle_idade}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idade}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListSogefiTitle_tempoCasa}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tempoCasa}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListSogefiTitle_dependentes}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dependentes}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListSogefiTitle_totalCop3Anos}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.totalCop3Anos}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListSogefiTitle_totalAtestados}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.totalAtestados}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{sogefiController.prepareView}" value="#{bundle.ListSogefiViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{sogefiController.prepareEdit}" value="#{bundle.ListSogefiEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{sogefiController.destroy}" value="#{bundle.ListSogefiDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{sogefiController.prepareCreate}" value="#{bundle.ListSogefiCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListSogefiIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

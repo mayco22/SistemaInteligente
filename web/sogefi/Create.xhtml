@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateSogefiTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateSogefiLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{sogefiController.selected.id}" title="#{bundle.CreateSogefiTitle_id}" required="true" requiredMessage="#{bundle.CreateSogefiRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.CreateSogefiLabel_centroCusto}" for="centroCusto" />
+                    <h:inputText id="centroCusto" value="#{sogefiController.selected.centroCusto}" title="#{bundle.CreateSogefiTitle_centroCusto}" required="true" requiredMessage="#{bundle.CreateSogefiRequiredMessage_centroCusto}"/>
+                    <h:outputLabel value="#{bundle.CreateSogefiLabel_municipio}" for="municipio" />
+                    <h:inputText id="municipio" value="#{sogefiController.selected.municipio}" title="#{bundle.CreateSogefiTitle_municipio}" required="true" requiredMessage="#{bundle.CreateSogefiRequiredMessage_municipio}"/>
+                    <h:outputLabel value="#{bundle.CreateSogefiLabel_sexo}" for="sexo" />
+                    <h:inputText id="sexo" value="#{sogefiController.selected.sexo}" title="#{bundle.CreateSogefiTitle_sexo}" required="true" requiredMessage="#{bundle.CreateSogefiRequiredMessage_sexo}"/>
+                    <h:outputLabel value="#{bundle.CreateSogefiLabel_estadoCivil}" for="estadoCivil" />
+                    <h:inputText id="estadoCivil" value="#{sogefiController.selected.estadoCivil}" title="#{bundle.CreateSogefiTitle_estadoCivil}" required="true" requiredMessage="#{bundle.CreateSogefiRequiredMessage_estadoCivil}"/>
+                    <h:outputLabel value="#{bundle.CreateSogefiLabel_idade}" for="idade" />
+                    <h:inputText id="idade" value="#{sogefiController.selected.idade}" title="#{bundle.CreateSogefiTitle_idade}" required="true" requiredMessage="#{bundle.CreateSogefiRequiredMessage_idade}"/>
+                    <h:outputLabel value="#{bundle.CreateSogefiLabel_tempoCasa}" for="tempoCasa" />
+                    <h:inputText id="tempoCasa" value="#{sogefiController.selected.tempoCasa}" title="#{bundle.CreateSogefiTitle_tempoCasa}" required="true" requiredMessage="#{bundle.CreateSogefiRequiredMessage_tempoCasa}"/>
+                    <h:outputLabel value="#{bundle.CreateSogefiLabel_dependentes}" for="dependentes" />
+                    <h:inputText id="dependentes" value="#{sogefiController.selected.dependentes}" title="#{bundle.CreateSogefiTitle_dependentes}" required="true" requiredMessage="#{bundle.CreateSogefiRequiredMessage_dependentes}"/>
+                    <h:outputLabel value="#{bundle.CreateSogefiLabel_totalCop3Anos}" for="totalCop3Anos" />
+                    <h:inputText id="totalCop3Anos" value="#{sogefiController.selected.totalCop3Anos}" title="#{bundle.CreateSogefiTitle_totalCop3Anos}" required="true" requiredMessage="#{bundle.CreateSogefiRequiredMessage_totalCop3Anos}"/>
+                    <h:outputLabel value="#{bundle.CreateSogefiLabel_totalAtestados}" for="totalAtestados" />
+                    <h:inputText id="totalAtestados" value="#{sogefiController.selected.totalAtestados}" title="#{bundle.CreateSogefiTitle_totalAtestados}" required="true" requiredMessage="#{bundle.CreateSogefiRequiredMessage_totalAtestados}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{sogefiController.create}" value="#{bundle.CreateSogefiSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{sogefiController.prepareList}" value="#{bundle.CreateSogefiShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateSogefiIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
