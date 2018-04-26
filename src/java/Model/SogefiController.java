@@ -1,7 +1,7 @@
 package Model;
 
-import Model.util.JsfUtil;
-import Model.util.PaginationHelper;
+import Controler.JsfUtil;
+import Controler.PaginationHelper;
 
 import java.io.Serializable;
 import java.util.ResourceBundle;
