@@ -1,7 +1,7 @@
-package Model;
+package br.com.Sistemaiteligente.Model;
 
-import Controler.JsfUtil;
-import Controler.PaginationHelper;
+import br.com.SistemaIteligente.Controler.JsfUtil;
+import br.com.SistemaIteligente.Controler.PaginationHelper;
 
 import java.io.Serializable;
 import java.util.ResourceBundle;
@@ -23,7 +23,7 @@ public class SogefiController implements Serializable {
     private Sogefi current;
     private DataModel items = null;
     @EJB
-    private Model.SogefiFacade ejbFacade;
+    private br.com.Sistemaiteligente.Model.SogefiFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
 

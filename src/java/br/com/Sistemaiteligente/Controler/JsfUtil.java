@@ -1,4 +1,4 @@
-package Controler;
+package br.com.SistemaIteligente.Controler;
 
 import java.util.List;
 import javax.faces.application.FacesMessage;

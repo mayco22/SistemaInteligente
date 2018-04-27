@@ -1,4 +1,4 @@
-package Controler;
+package br.com.SistemaIteligente.Controler;
 
 import javax.faces.model.DataModel;
 
