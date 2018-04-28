@@ -17,14 +17,15 @@ import weka.core.Instances;
  * @author mayco
  */
 public class Processamento {
-     private Instances instancias;
-    public void carregaBaseWeka() throws Exception {
-        // TODO code application logic here
-        ConverterUtils.DataSource ds = new ConverterUtils.DataSource("src/br/com/weka/UCP_Dataset.arff");
-        instancias = ds.getDataSet();
-        instancias.setClassIndex(2);
+    private Instances instancias;
     
+    public void carregaBaseWekaArq(int nIndex, String caminho) throws Exception {
+        // TODO code application logic here
+        ConverterUtils.DataSource ds = new ConverterUtils.DataSource(caminho);
+        instancias = ds.getDataSet();
+        instancias.setClassIndex(nIndex);
     }
+    
     public void linearRegressao() throws Exception{
         LinearRegression lr = new LinearRegression();
         //Criação de tabela de probabilidade
