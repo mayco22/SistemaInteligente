@@ -5,6 +5,7 @@
  */
 package Servlets;
 
+import br.com.SistemaIteligente.WEkA.Connection;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,23 +18,24 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author mayco
  */
-@WebServlet(name = "Computador", urlPatterns = {"/Computador"})
-public class Computador extends HttpServlet {
-
+@WebServlet(name = "Logon", urlPatterns = {"/Logon"})
+public class Logon extends HttpServlet {
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException{
+        //Connection con = (Connection) Connection.getConnection();
+        
         //Seta os valores dos campos no html nas variaveis
-        float total = Float.parseFloat(request.getParameter("total"));
-        float preco = Float.parseFloat(request.getParameter("preco"));
-        float consumo = Float.parseFloat(request.getParameter("consumo"));
+        String usuario = request.getParameter("usuario");
+        String senha = request.getParameter("senha");
+        request.setAttribute("retorno", usuario+" ("+senha+")");
+        
         //faz os calculos
-        float valor = total * preco;
-        float distancia = total * consumo;
-        //cria atributos para retorno
-        request.setAttribute("valor", valor);
-        request.setAttribute("distancia", distancia);
+        
+        request.getRequestDispatcher("Logon.jsp").forward(request, response);
+        
         //faz uma requisicao para mandar no caminho informado
-        request.getRequestDispatcher("computador.jsp").forward(request, response);
+       // Connection.closeConnection(con, stmt);
     }
 }
