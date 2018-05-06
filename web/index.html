@@ -5,17 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Música para todos - Spotify</title>
-    <link rel="icon" href="imagens/favicon.png">
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>Sistema Inteligente</title>
+    
+<script type="text/javascript" src="JavaScript/javascript.js"></script>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,18 +26,14 @@
  <div class="container">
         <div class="card card-container">
             <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <img id="profile-img" class="profile-img-card" src="img/logo.png" />
             <p id="profile-name" class="profile-name-card"></p>
-            <form class="form-signin" action="Logon" method="POST">
-                <span id="reauth-email" class="reauth-email"></span>
-                <input type="Text" id="inputEmail" class="form-control" placeholder="Usuário" required autofocus name="usuario">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required name="senha">
-                <div id="remember" class="checkbox">
-                    <label>
-                        <input type="checkbox" value="Lembrar"> Lembrar-me
-                    </label>
-                </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Entrar</button>
+            <form class="form-signin">
+                
+                <input type="text" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+                
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" onclick="pagina();" >Entrar</button>
             </form><!-- /form -->
             <a href="#" class="forgot-password">
                Esqueceu a senha?
@@ -53,7 +42,20 @@
     </div><!-- /container -->
     </div>
 
-      
+    <footer>
+        
     
+  <div class="container text-center">
+      <div class="row">
+         <p>&copy; Todos os Direitos Reservados.</p>
+    </div>
+
+  </div>
+    </footer>  
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
