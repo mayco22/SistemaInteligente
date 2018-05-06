@@ -19,7 +19,7 @@ public class ConnectionFactory {
     private static java.sql.Connection con = null;
     public static java.sql.Connection getConnection(){
         try {
-            con = DriverManager.getConnection("jdbc:sqlite:sogefi.db");
+            con = DriverManager.getConnection("jdbc:sqlite:C:/xampp/htdocs/SistemaInteligente/sogefi.db");
             return con;
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Erro: "+e);

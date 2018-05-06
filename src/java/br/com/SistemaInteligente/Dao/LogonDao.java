@@ -23,21 +23,23 @@ public class LogonDao {
         ResultSet rs = null;
         Connection con = ConnectionFactory.getConnection();
         
-        stmt = con.prepareStatement("Select * from usuarios where name ='?' and senha = '?'");
+        stmt = con.prepareStatement("Select * from Usuarios where name = ? and senha = ?");
         stmt.setString(1, usuario);
         stmt.setString(2, pass);
         rs = stmt.executeQuery();
         LogonBean l = new LogonBean();
+        int sum = 0;
         while(rs.next()){
             l.setName(rs.getString("name"));
             l.setSenha(rs.getString("senha"));
+            sum = sum + 1;
         }
-        if(l.getName().equals("") || l.getName() == null){
-            ConnectionFactory.closeConnection(con, stmt, rs);
-            return false;
-        }else{
+        if(sum > 0){
             ConnectionFactory.closeConnection(con, stmt, rs);
             return true;
+        }else{
+            ConnectionFactory.closeConnection(con, stmt, rs);
+            return false;
         }
     }
 }

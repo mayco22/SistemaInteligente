@@ -34,15 +34,16 @@ public class Logon extends HttpServlet {
         boolean Result = false;
         try {
             //request.setAttribute("retorno", usuario+" ("+senha+")");
+            
             Result = ld.GetLogon(usuario, senha);
             //faz os calculos
+            if(Result == true){
+                request.getRequestDispatcher("pagina2.html").forward(request, response);
+            }else{
+                request.getRequestDispatcher("index.html").forward(request, response);
+            }
         } catch (SQLException ex) {
             Logger.getLogger(Logon.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        if(Result){
-            request.getRequestDispatcher("pagina2.html").forward(request, response);
-        }else{
-            request.getRequestDispatcher("index.html").forward(request, response);
         }
     }
 }
