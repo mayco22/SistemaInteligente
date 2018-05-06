@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.SistemaInteligente.Model;
+package br.com.SistemaInteligente.Bean;
 
 /**
  *
  * @author mayco
  */
-public class Usuario {
+public class LogonBean {
 
     /**
      * @return the name

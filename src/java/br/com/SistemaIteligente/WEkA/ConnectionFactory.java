@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  *
  * @author mayco
  */
-public class Connection {
+public class ConnectionFactory {
     private static java.sql.Connection con = null;
     public static java.sql.Connection getConnection(){
         try {
