@@ -6,16 +6,13 @@
 package Servlets;
 
 
+import Usuario.Usuario;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import br.com.SistemaInteligente.Dao.LogonDao;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 /**
  *
  * @author mayco
@@ -27,23 +24,19 @@ public class Logon extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException{
         //Connection con = (ConnectionFactory) ConnectionFactory.getConnection();
-        LogonDao ld = new LogonDao();
+        Usuario usu = new Usuario();
         //Seta os valores dos campos no html nas variaveis
         String usuario = request.getParameter("usuario");
         String senha = request.getParameter("senha");
         boolean Result = false;
-        try {
-            //request.setAttribute("retorno", usuario+" ("+senha+")");
-            
-            Result = ld.GetLogon(usuario, senha);
-            //faz os calculos
-            if(Result == true){
-                request.getRequestDispatcher("pagina2.html").forward(request, response);
-            }else{
-                request.getRequestDispatcher("index.html").forward(request, response);
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(Logon.class.getName()).log(Level.SEVERE, null, ex);
+        //request.setAttribute("retorno", usuario+" ("+senha+")");
+        System.out.println(usu.getName());
+        
+        //faz os calculos
+        if(Result){
+            request.getRequestDispatcher("pagina2.html").forward(request, response);
+        }else{
+            request.getRequestDispatcher("index.html").forward(request, response);
         }
     }
 }
