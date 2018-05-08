@@ -6,7 +6,6 @@
 package Servlets;
 
 
-import Usuario.Usuario;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,13 +23,11 @@ public class Logon extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException{
         //Connection con = (ConnectionFactory) ConnectionFactory.getConnection();
-        Usuario usu = new Usuario();
         //Seta os valores dos campos no html nas variaveis
         String usuario = request.getParameter("usuario");
         String senha = request.getParameter("senha");
         boolean Result = false;
         //request.setAttribute("retorno", usuario+" ("+senha+")");
-        System.out.println(usu.getName());
         
         //faz os calculos
         if(Result){

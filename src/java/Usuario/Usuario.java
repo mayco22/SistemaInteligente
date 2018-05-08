@@ -15,7 +15,6 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -38,10 +37,8 @@ public class Usuario implements Serializable {
     @Basic(optional = false)
     @Column(name = "UserId")
     private Integer userId;
-    @Size(max = 100)
     @Column(name = "Name")
     private String name;
-    @Size(max = 100)
     @Column(name = "Pass")
     private String pass;
 
