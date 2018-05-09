@@ -5,13 +5,16 @@
  */
 package Servlet;
 
-import Usuarios.Usuario;
+import br.com.SistemaInteligente.Factory.HibernateUtil;
+import br.com.SistemaInteligente.Modelo.Usuario;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 /**
  *
@@ -45,6 +48,10 @@ public class Logon extends HttpServlet {
         }else{
             request.getRequestDispatcher("index.html").forward(request, response);
         }
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session session = sf.openSession();
+        
+        session.close();
     }
 
     
