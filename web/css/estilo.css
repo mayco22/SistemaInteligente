@@ -206,3 +206,13 @@ body, html {
     
     background: rgba(0,100,0,.5);
 }
+/*PAGINA 3 */
+
+#resultado{
+    
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    margin: auto;
+    border: 2px solid red;
+}

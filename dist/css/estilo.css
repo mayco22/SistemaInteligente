@@ -1,0 +1,218 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05/05/2018, 11:58:36
+    Author     : Meu computador
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/*TELA LOGIN*/
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background:rgb(211,211,211);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+/*
+ * Card component
+ */
+.card {
+    background-color: #F7F7F7;
+   
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 150px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+    width: 100%;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+   
+}
+
+
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background: rgb(0,100,0);
+
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+   
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: rgb(12, 97, 33);
+}
+/*TELA CADASTRO*/
+
+.page-header{
+    margin-top: 100px;
+    
+}
+
+.navbar-inverse{
+    
+    background: #fff;
+    height: 60px;
+   
+}
+
+.navbar-inverse .navbar-nav li a {
+    color: black;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+    font-size: 16px;
+    text-align: center;
+    margin-right: 20px;
+    
+}
+.navbar-toggle{
+    margin-top: 20px;
+    
+}
+.navbar-inverse .navbar-nav li a:hover {
+    transition: background .5s;
+    background-color:#5398c6;
+    
+}
+.navbar-brand img{
+  
+  height: 200%;
+ 
+  margin-bottom: 30px;
+
+    
+}
+
+.navbar-right .btn-primary{
+    
+    margin-right: 50px;
+    margin-top: 13px;
+    text-align: center;
+   background: rgb(178,34,34);
+    font-size: 14px;
+    color: white;
+    transition: .3s;
+}
+
+.navbar-right .btn-primary:hover{
+    
+    background: rgb(255,99,71);
+    color: black;
+}
+#idade{
+    width: 10%;
+    
+}
+
+.btn-default{
+    
+    background: rgb(0,100,0);
+    transition: .3s;
+    color: #fff;
+}
+
+.btn-default:hover{
+    
+    background: rgba(0,100,0,.5);
+}
+/*PAGINA 3 */
+
+#resultado{
+    
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    margin: auto;
+    border: 2px solid red;
+}
