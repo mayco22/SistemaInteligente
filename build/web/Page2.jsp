@@ -28,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="img/logo2.png"></a>
+                    <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
                 </div><!--FINAL NAVBAR HEADER-->
                 <div class="collapse navbar-collapse" id="navegacao">
                     <div>   
@@ -39,7 +39,7 @@
                     </div>
                     <div>   
                         <ul class="nav navbar-nav navbar-right">
-                            <li><button class="btn btn-lg btn-primary " type="submit" onclick="sair();" >Sair</button></li>
+                            <li><a class="btn btn-lg btn-primary " type="submit" onclick="sair();" >Sair</a></li>
                         </ul>
                     </div>
                 </div> <!--FINAL NAVBAR COLLAPSE-->
@@ -54,64 +54,80 @@
                     <form class="form-horizontal" action="trainer" method="GET" >
                         <div class="form-group">
                             <div class="col-md-10">
-                            <label>Centro de custo</label>
+                                <label for="centrocusto">Centro de custo*</label>
                              
-                                 <input type="text" class="form-control"  placeholder="Centro de custo" name="centrocusto">
+                                <input type="number" class="form-control" id="centrocusto" step="any"  placeholder="Centro de custo" name="centrocusto" required>
                              </div>
                         </div>
                         
                         
                         <div class="form-group">
-                            <div class="col-md-10"
-                            <label>Municipio</label>
-                            <input type="text" name="municipio" class="form-control"  placeholder="Municipio" ></input>
+                            <div class="col-md-10">
+                                 <label for="municipio">Municipio*</label>
+                                 <input type="number" id="municipio"  name="municipio" step="any" class="form-control"  placeholder="Municipio" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10">
-                            <label>Sexo</label>
-                            <input type="text" name="sexo" class="form-control"  placeholder="Sexo"></input>
+                                <label for="sexo">Sexo*</label>
+                                <input type="number" id="sexo" name="sexo" class="form-control" step="any"  placeholder="Sexo" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10">
-                            <label>Estado civil</label>
-                            <input type="text" name="estadocivil" class="form-control"  placeholder="Estado Civil"></input>
+                                <label for="estadocivil">Estado civil*</label>
+                                <input type="number" name="estadocivil" id="estadocivil" class="form-control" step="any"  placeholder="Estado Civil" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10">
-                            <label>Idade</label>
-                            <input type="text" name="idade" class="form-control"  placeholder="Idade" ></input>
+                                <label for="idade">Idade*</label>
+                                <input type="number" name="idade" id="idade" class="form-control" step="any"  placeholder="Idade" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10">
-                            <label>Tempo de casa</label>
-                            <input type="text" name="tempocasa" class="form-control"  placeholder="Tempo de Casa"></input>
+                                <label for="tempocasa">Tempo de casa*</label>
+                                <input type="number" name="tempocasa" id="tempocasa" class="form-control" step="any"  placeholder="Tempo de Casa" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10">
-                            <label>Dependentes</label>
-                            <input type="text" name="dependentes" class="form-control"  placeholder="Dependentes"></input>
+                                <label for="dependentes">Dependentes*</label>
+                                <input type="number" name="dependentes" id="dependentes" class="form-control" step="any"  placeholder="Dependentes" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10">
-                            <label>Total de Coparticipação</label>
-                            <input type="text" name="totalcop" class="form-control"  placeholder="Total de Coparticipacao"></input>
+                                <label for="totalcop">Total de Coparticipação*</label>
+                                <input type="number" id="totalcop" name="totalcop" class="form-control" step="any" placeholder="Total de Coparticipacao" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-10">
-                            <label>Total de atestados</label>
-                            <input type="text" name="totalatestado" class="form-control"  placeholder="Total de Atestados"></input>
+                                <label for="totalatestado">Total de atestados*</label>
+                                <input type="number" id="totalatestado" name="totalatestado" class="form-control" step="any"  placeholder="Total de Atestados" required>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-default">Treinar</button>
+                        <a type="submit" class="btn btn-default btn-lg">Treinar</a>
                     </form>
                 </div> 
+                
+                <div class="col-md-4">
+                    <div>
+                        <h1>Instruções</h1>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis erat. Etiam eu ornare odio,
+                            vitae ultricies magna. Morbi congue odio et tempus rutrum. Nunc sollicitudin semper lacus, at egestas lectus tempor sed.
+                            Vivamus lectus magna, viverra mattis interdum quis, malesuada ullamcorper arcu. Ut lobortis convallis augue vel finibus. Donec in mauris non ipsum accumsan accumsan quis sit amet magna. Maecenas ultrices aliquam justo, vel pretium erat. Pellentesque porttitor sodales risus, quis fringilla nisi fermentum vestibulum. Fusce finibus pulvinar mi ut egestas. Suspendisse suscipit felis eget elementum eleifend. Vestibulum aliquet cursus turpis, ut luctus diam malesuada nec. Integer et quam tellus.
+                            Donec elementum sodales libero, at malesuada lacus fringilla vel. Nulla sit amet cursus arcu.</p>
+                        
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis erat. Etiam eu ornare odio,
+                            vitae ultricies magna. Morbi congue odio et tempus rutrum. Nunc sollicitudin semper lacus, at egestas lectus tempor sed.
+                            Vivamus lectus magna, viverra mattis interdum quis, malesuada ullamcorper arcu. Ut lobortis convallis augue vel finibus. Donec in mauris non ipsum accumsan accumsan quis sit amet magna. Maecenas ultrices aliquam justo, vel pretium erat. Pellentesque porttitor sodales risus, quis fringilla nisi fermentum vestibulum. Fusce finibus pulvinar mi ut egestas. Suspendisse suscipit felis eget elementum eleifend. Vestibulum aliquet cursus turpis, ut luctus diam malesuada nec. Integer et quam tellus.
+                            Donec elementum sodales libero, at malesuada lacus fringilla vel. Nulla sit amet cursus arcu.</p>
+                    </div>
+                </div>
             </div>
         </div> 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
