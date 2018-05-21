@@ -33,8 +33,7 @@
                 <div class="collapse navbar-collapse" id="navegacao">
                     <div>   
                         <ul class="nav navbar-nav navbar-left">
-                            <li><a href="pagina2.html">Cadastro</a></li>
-                            <li><a href="pagina3.html">Treinamento</a></li>
+                            <li><a href="Page2.html">Treinamento</a></li>
                         </ul>
                     </div>
                     <div>   
@@ -55,16 +54,13 @@
                         <div class="form-group">
                             <div class="col-md-10">
                                 <label for="centrocusto">Centro de custo*</label>
-                             
                                 <input type="number" class="form-control" id="centrocusto" step="any"  placeholder="Centro de custo" name="centrocusto" required>
-                             </div>
+                            </div>
                         </div>
-                        
-                        
                         <div class="form-group">
                             <div class="col-md-10">
-                                 <label for="municipio">Municipio*</label>
-                                 <input type="number" id="municipio"  name="municipio" step="any" class="form-control"  placeholder="Municipio" required>
+                                <label for="municipio">Municipio*</label>
+                                <input type="number" id="municipio"  name="municipio" step="any" class="form-control"  placeholder="Municipio" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -109,7 +105,7 @@
                                 <input type="number" id="totalatestado" name="totalatestado" class="form-control" step="any"  placeholder="Total de Atestados" required>
                             </div>
                         </div>
-                        <a type="submit" class="btn btn-default btn-lg">Treinar</a>
+                        <input type="submit" class="btn btn-default btn-lg" value="Treinar"/>
                     </form>
                 </div> 
                 

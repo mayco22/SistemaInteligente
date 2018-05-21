@@ -15,7 +15,7 @@ public class MutiTreina {
      */
     public String []Treinador() throws Exception {
 
-        DataSource source = new DataSource("web/BASEnova3.arff");
+        DataSource source = new DataSource("C:/Users/mayco/Documents/NetBeansProjects/ProjetoWeka/web/BASEnova3.arff");
         Instances dataset = source.getDataSet();
         dataset.setClassIndex(dataset.numAttributes()-1);
         

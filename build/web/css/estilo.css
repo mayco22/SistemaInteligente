@@ -178,14 +178,11 @@ body, html {
     
     margin-right: 50px;
     margin-top: 13px;
-    padding-bottom: 10px;
     text-align: center;
-    background: rgb(178,34,34);
+   background: rgb(178,34,34);
     font-size: 14px;
     color: white;
     transition: .3s;
-    
-    
 }
 
 .navbar-right .btn-primary:hover{
@@ -203,21 +200,11 @@ body, html {
     background: rgb(0,100,0);
     transition: .3s;
     color: #fff;
-    width: 150px;
-    height: 50px;
-    padding: auto;
 }
 
 .btn-default:hover{
     
-    background: rgba(0,100,0,.1);
-    border: 1px solid rgb(0,100,0);
-    color: rgb(0,100,0);
-}
-
-#idade{
-    
- width: 200px;   
+    background: rgba(0,100,0,.5);
 }
 /*PAGINA 3 */
 
