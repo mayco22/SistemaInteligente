@@ -40,13 +40,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="img/logo2.png"></a>
+                    <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
                 </div><!--FINAL NAVBAR HEADER-->
 
                 <div class="collapse navbar-collapse" id="navegacao">
                     <div>   
                         <ul class="nav navbar-nav navbar-left">
-                            <li><a href="Page2.html">Treinamento</a></li>
+                            <li><a href="Page2.jsp">Treinamento</a></li>
 
                         </ul>
                     </div>
@@ -54,7 +54,7 @@
                     <div>   
                         <ul class="nav navbar-nav navbar-right">
 
-                            <li><button class="btn btn-lg btn-primary " type="submit" onclick="sair();" >Sair</button></li>
+                            <li><a class="btn btn-lg btn-primary " type="submit" href="index.jsp" >Sair</a></li>
                         </ul>
                     </div>
 

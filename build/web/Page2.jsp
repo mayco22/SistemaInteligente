@@ -38,7 +38,7 @@
                     </div>
                     <div>   
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a class="btn btn-lg btn-primary " type="submit" onclick="sair();" >Sair</a></li>
+                            <li><a class="btn btn-lg btn-primary " type="submit" href="index.jsp" >Sair</a></li>
                         </ul>
                     </div>
                 </div> <!--FINAL NAVBAR COLLAPSE-->
