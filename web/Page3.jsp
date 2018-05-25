@@ -65,14 +65,18 @@
             <div class="row">
                 <div class ="col-md-12">
                     <div id ="resultado">
+                        <h1 style="size: 20px">Resultado</h1>
                         <% 
-                            String Resp1 = (String) request.getAttribute("Resp1"); 
-                            String Resp2 = (String) request.getAttribute("Resp2"); 
-                            String Resp3 = (String) request.getAttribute("Resp3"); 
+                            String []Array = (String[]) request.getAttribute("Resultado");
+                            String Min = Array[1];
+                            String Max = Array[2];
+                            String MinValue = Array[Array.length-3];
+                            String MaxValue = Array[Array.length-2];
+                            String Result = Array[Array.length-1];
                         %> 
-                        <%=Resp1%>
-                        <%=Resp2%>
-                        <%=Resp3%>
+                    O resultado pode variar o error entre  R$<%=Min%> á  R$<%=Max%>.<br>
+                    Valor: R$<%=Result%><br>
+                    Podendo assim errar no minimo: R$<%=MinValue%> e no maximo: R$<%=MaxValue%>
                        
                         
                     </div>

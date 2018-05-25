@@ -42,6 +42,7 @@ public class Treinamento extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
+        MutiTreina MT = new MutiTreina();
         double in1 = Double.parseDouble(request.getParameter("centrocusto"));
         double in2 = Double.parseDouble(request.getParameter("municipio"));
         double in3 = Double.parseDouble(request.getParameter("sexo"));
@@ -49,22 +50,16 @@ public class Treinamento extends HttpServlet {
         double in5 = Double.parseDouble(request.getParameter("idade"));
         double in6 = Double.parseDouble(request.getParameter("tempocasa"));
         double in7 = Double.parseDouble(request.getParameter("dependentes"));
-        double in8 = Double.parseDouble(request.getParameter("totalcop"));
-        double in9 = Double.parseDouble(request.getParameter("totalatestado"));
-        //double vet[] = {in1,in2,in3,in4,in5,in6,in7,in8,in9};
-        
-        String out[] = null;
+        double in8 = Double.parseDouble(request.getParameter("totalatestado"));
+        double vet[] = {in1,in2,in3,in4,in5,in6,in7,in8};
         
         try {
-            out = Resp();
+            String out[] = MT.Treinador(vet);
+            request.setAttribute("Resultado", out);
+            request.getRequestDispatcher("Page3.jsp").forward(request, response);
         } catch (Exception ex) {
             Logger.getLogger(Treinamento.class.getName()).log(Level.SEVERE, null, ex);
         }
-            request.setAttribute("Resp1", out[0]);
-            request.setAttribute("Resp2", out[1]);
-            request.setAttribute("Resp3", out[2]);
-            
-            request.getRequestDispatcher("Page3.jsp").forward(request, response);
     }
     
     @Override
@@ -81,12 +76,5 @@ public class Treinamento extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    
-    
-    private String[] Resp() throws Exception{
-        MutiTreina MT = new MutiTreina();
-        String resp[]=MT.Treinador();
-        return resp;
-    }
     
 }

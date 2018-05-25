@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="navegacao">
                     <div>   
                         <ul class="nav navbar-nav navbar-left">
-                            <li><a href="Page2.html">Treinamento</a></li>
+                            <li><a href="Page2.jsp">Treinamento</a></li>
                         </ul>
                     </div>
                     <div>   
@@ -91,12 +91,6 @@
                             <div class="col-md-10">
                                 <label for="dependentes">Dependentes*</label>
                                 <input type="number" name="dependentes" id="dependentes" class="form-control" step="any"  placeholder="Dependentes" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-10">
-                                <label for="totalcop">Total de Coparticipação*</label>
-                                <input type="number" id="totalcop" name="totalcop" class="form-control" step="any" placeholder="Total de Coparticipacao" required>
                             </div>
                         </div>
                         <div class="form-group">
