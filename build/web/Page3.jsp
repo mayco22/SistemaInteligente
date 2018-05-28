@@ -1,10 +1,12 @@
-<%-- 
-    Document   : Page3
-    Created on : 17/05/2018, 20:26:03
-    Author     : mayco
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    String[] Array = (String[]) request.getAttribute("Resultado");
+    String Min = Array[1];
+    String Max = Array[2];
+    String MinValue = Array[Array.length - 3];
+    String MaxValue = Array[Array.length - 2];
+    String Result = Array[Array.length - 1];
+%> 
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -66,19 +68,9 @@
                 <div class ="col-md-12">
                     <div id ="resultado">
                         <h1 style="size: 20px">Resultado</h1>
-                        <% 
-                            String []Array = (String[]) request.getAttribute("Resultado");
-                            String Min = Array[1];
-                            String Max = Array[2];
-                            String MinValue = Array[Array.length-3];
-                            String MaxValue = Array[Array.length-2];
-                            String Result = Array[Array.length-1];
-                        %> 
-                    O resultado pode variar o error entre  R$<%=Min%> á  R$<%=Max%>.<br>
-                    Valor: R$<%=Result%><br>
-                    Podendo assim errar no minimo: R$<%=MinValue%> e no maximo: R$<%=MaxValue%>
-                       
-                        
+                        O resultado pode variar o error entre  R$<%=Min%> á  R$<%=Max%>.<br>
+                        Valor: R$<%=Result%><br>
+                        Podendo assim errar no minimo: R$<%=MinValue%> e no maximo: R$<%=MaxValue%>
                     </div>
                 </div>
             </div>

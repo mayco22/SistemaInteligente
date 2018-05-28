@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -32,13 +33,15 @@ public class Auth extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        HttpSession session = request.getSession();
         String usuario = request.getParameter("usuario");
         String senha = request.getParameter("senha");
         
-        if(usuario.equals("admin") || senha.equals("admin"))
+        if(usuario.equals("admin") && senha.equals("123456"))
             request.getRequestDispatcher("Page2.jsp").forward(request, response);
-        else
-            response.sendError(5001, "Usuario ou senha incorreta!");
+        else{
+            session.invalidate();
+            response.sendRedirect("index.jsp");
+        }
     }
 }
